@@ -1,0 +1,19 @@
+.box{
+    width:100px;
+    height:100px;
+    background-color: tomato;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
+#flex{
+    display: flex;
+    flex-direction: row;
+}
+#flex1,#flex2,#flex3{
+    width:200px;
+    height:200px;
+    background-color: lightgreen;
+    border-radius: 20px;
+    margin: 20px;
+}

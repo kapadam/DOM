@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ASSIGNMENTS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 style="text-align: center;">DOM ASSIGNMENTS</h1>
+    <h3>1. Write the code to access element which is having id as "text" ?</h3>
+    <p><b style="text-decoration: underline;">HTML Code:</b></p>
+    <pre>
+    &lt;div id="text"&gt;Hello PrepBytes&lt;/div&gt;
+    </pre>
+    <p><b style="text-decoration: underline;">JS Code:</b></p>
+    <pre>
+    let text1=document.getElementById("text");
+    console.log(text1.innerText);
+    </pre>
+    <h3 style="text-decoration: underline;">Output:</h3>
+    <div id="text">Hello PrepBytes</div>
+
+
+    <h3>2. Write the code to access element which is having tag as "h1" ?</h3>
+    <p><b style="text-decoration: underline;">HTML Code:</b></p>
+    <pre>
+    &lt;h1&gt;Hello World!!!...&lt;/h1&gt;
+    </pre>
+    <p><b style="text-decoration: underline;">JS Code:</b></p>
+    <pre>
+    let h1=document.getElementsByTagName("h1");
+    console.log(h1.innerText);
+    </pre>
+    <h3 style="text-decoration: underline;">Output:</h3>
+    <h1>Hello World!!!...</h1>
+
+
+    <h3>3. Write the code to access element which is having class as "box" ?</h3>
+    <b style="text-decoration: underline;">HTML Code:</b>
+    <pre>
+    &lt;div class="box"&gt;Hello&lt;/div&gt;       
+    </pre>
+    <b style="text-decoration: underline;">JS Code:</b>
+    <pre>
+    let box=document.getElementsByClassName("box");
+    console.log(box[0]);
+    </pre>
+    <div class="box">Hello</div>
+
+    <h3>4. &lt;h1&gt;Hello&lt;/h1&gt; <br>
+    Change the heading from "Hello" to "Hello World" using DOM functions
+    </h3>
+    <b style="text-decoration: underline;">HTML Code:</b>
+    <pre>
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    </pre>
+    <b style="text-decoration: underline;">JS Code:</b>
+    <pre>
+    let h=document.getElementsByTagName("h1");
+    h[2].innerText="Hello World";
+    </pre>
+    <h1>Hello</h1>
+    <h3>5. Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</h3>
+    <div id="flex">
+        <div id="flex1"></div>
+        <div id="flex2"></div>
+        <div id="flex3"></div>
+    </div>
+    <button id="flexbutton">Change Flex direction</button>
+    <h3>6. What is the difference between window vs document?</h3>
+    <p>Document Object: The document object represent a web page that is loaded in the browser. By accessing the document object, we can access the element 
+        in the HTML page. With the help of document objects, we can add dynamic content to our web page. The document object can be accessed with a 
+        window.document or just document. <br>
+
+        Ex:document.property_name;</p>
+    <p>            The window object is the topmost object of the DOM hierarchy. It represents a browser window or frame that displays the contents of the webpage. 
+        Whenever a window appears on the screen to display the contents of the document, the window object is created. 
+<br>
+        Ex:window.property_name;
+</p>
+    <h3>7. &lt;h1&gt;Hello &lt;/h1&gt; <br>
+        Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</h3>
+        <pre>
+            <h1>Hello</h1>
+    
+    let heading = document.getElementsByTagName('h1')[2];
+    heading.style.color = 'tomato';
+    heading.setAttribute('id', 'heading');
+        </pre>
+        <h3>8. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h3>
+    <h2 id="h2">Hello World</h2>
+    <button id="replace">Replace Text</button>
+    <h3>9. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h3>
+    <div id="clock">
+        <span id="hr"></span><span>:</span>
+        <span id="min"></span><span>:</span>
+        <span id="sec"></span>
+    </div>
+<button onclick="timer()">Start Time</button>
+    <script src="index.js"></script>
+</body>
+</html>
